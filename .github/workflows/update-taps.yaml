@@ -1,0 +1,19 @@
+name: update-tap
+
+on:
+  schedule:
+    # Run every hour
+    - cron:  '0 * * * *'
+
+jobs:
+  update-tap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Homebrew formulae
+        uses: dawidd6/action-homebrew-bump-formula@v3
+        with:
+          message: chore(dep): bump version
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          tap: c6o/homebrew-tools
+          force: false
+          livecheck: true
