@@ -12,7 +12,6 @@ jobs:
       - name: Update Homebrew formulae
         uses: dawidd6/action-homebrew-bump-formula@v3
         with:
-          message: chore(dep): bump version
           token: "${{ secrets.GITHUB_TOKEN }}"
           tap: c6o/homebrew-tools
           force: false
