@@ -1,5 +1,4 @@
 name: update-tap
-
 on:
   schedule:
     # Run every hour
@@ -7,6 +6,7 @@ on:
 
 jobs:
   update-tap:
+    if: false  # disable for now (needs personal access token)
     runs-on: ubuntu-latest
     steps:
       - name: Update Homebrew formulae
