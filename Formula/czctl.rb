@@ -3,8 +3,8 @@ require "language/node"
 class Czctl < Formula
   desc "Develop, debug, deploy using CodeZero"
   homepage "https://codezero.io/"
-  url "https://registry.npmjs.org/@c6o/cli/-/cli-1.2.0.tgz"
-  sha256 "a9f42c8ac4cf0763d43479f4eac1998478b8c00f6b88dacd739908341ef83549"
+  url "https://registry.npmjs.org/@c6o/cli/-/cli-1.2.1.tgz"
+  sha256 "4e0546fd732eb10dbf8398d561af08010bbf8e75b40ccbe6fdd8af9f05c9ffe1"
 
   depends_on "node"
 
