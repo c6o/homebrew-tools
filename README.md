@@ -27,3 +27,7 @@ Checkout our [public roadmap](https://github.com/c6o/roadmap/) to see what is co
 #### Feature Requests
 
 [Open a new issue](https://github.com/c6o/roadmap/issues/new?assignees=&labels=feature&template=feature.md&title=) to propose a new features. We ask that you please search the existing open features first, to see if there is already an existing request for the same feature.
+
+## notes
+
+This brew installer uses npm install to install the CodeZero cli tool and desktop. By default, brew brings in the latest stable node version.
