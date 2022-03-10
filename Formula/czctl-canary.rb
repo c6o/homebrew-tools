@@ -3,8 +3,7 @@ class CzctlCanary < Formula
   homepage "https://codezero.io/"
   version "1.4.0-alpha.1"
   
-  #url "https://get.codezero.io/#{version}/install.sh",
-  url "https://storage.googleapis.com/c6o-releases/install-headless.sh",
+  url "https://releases.codezero.io/install-headless.sh",
     using: :curl
 
   def install
