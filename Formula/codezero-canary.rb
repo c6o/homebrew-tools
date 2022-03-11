@@ -1,4 +1,4 @@
-class Codezero < Formula
+class CodezeroCanary < Formula
   desc "Develop, debug, deploy using CodeZero"
   homepage "https://codezero.io/"
   version "1.4.0-alpha.2"

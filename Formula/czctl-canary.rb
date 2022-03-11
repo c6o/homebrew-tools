@@ -6,7 +6,6 @@ class CzctlCanary < Formula
   url "https://releases.codezero.io/install-headless.sh",
     using: :curl
 
-  
   head do
     version "1.4.0-alpha.2"
   end
