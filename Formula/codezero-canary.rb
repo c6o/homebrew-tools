@@ -1,7 +1,7 @@
 class Codezero < Formula
   desc "Develop, debug, deploy using CodeZero"
   homepage "https://codezero.io/"
-  version :latest
+  version "1.4.0-alpha.2"
   
   url "https://releases.codezero.io/install.sh",
     using: :curl
