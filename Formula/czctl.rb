@@ -12,7 +12,7 @@ class Czctl < Formula
     ohai ""
     ohai "Preparing to install CodeZero.  This may take a moment to complete."
     
-    bin.install "./*"
+    bin.install Dir["./*"]
   end
 
   test do
