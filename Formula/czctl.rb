@@ -1,19 +1,23 @@
-require "language/node"
-
-class Czctl < Formula
+class CzctlCanary < Formula
   desc "Develop, debug, deploy using CodeZero"
   homepage "https://codezero.io/"
-  url "https://registry.npmjs.org/@c6o/cli/-/cli-1.3.2.tgz"
-  sha256 "082acc0c3dcd800f780cb5c4c8bbaf8a3705f1c8038461f210d280bc220e49ca"
-
-  depends_on "node"
+  version "1.4.0"
+  
+  url "https://releases.codezero.io/install-headless.sh",
+    using: :curl
 
   def install
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
-    bin.install_symlink Dir["#{libexec}/bin/*"]
+    odie "Sorry, CodeZero is currently not installable via homebrew. \nPlease run: 'curl -L https://releases.codezero.io/install.sh | /bin/bash' instead" 
+    
+    # ohai ""
+    # ohai "Preparing to install CodeZero.  This may take a moment to complete."
+    
+    # system "/bin/bash", "./install-headless.sh"
+    # bin.install_symlink "/usr/local/bin/codezero/czctl"
   end
 
   test do
-    system "#{bin}/czctl", "help"
+    system "/usr/local/bin/czctl", "start"
+    system "/usr/local/bin/czctl", "stop"
   end
 end
