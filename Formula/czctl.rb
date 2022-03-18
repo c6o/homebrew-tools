@@ -1,23 +1,22 @@
-class CzctlCanary < Formula
+class Czctl < Formula
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  os = OS.mac? ? "darwin" : "linux"
+
   desc "Develop, debug, deploy using CodeZero"
   homepage "https://codezero.io/"
   version "1.4.0"
   
-  url "https://releases.codezero.io/install-headless.sh",
-    using: :curl
+  url "https://releases.codezero.io/#{version}/headless-#{os}-#{arch}.tgz"
 
   def install
-    odie "Sorry, CodeZero is currently not installable via homebrew. \nPlease run: 'curl -L https://releases.codezero.io/install.sh | /bin/bash' instead" 
+    ohai ""
+    ohai "Preparing to install CodeZero.  This may take a moment to complete."
     
-    # ohai ""
-    # ohai "Preparing to install CodeZero.  This may take a moment to complete."
-    
-    # system "/bin/bash", "./install-headless.sh"
-    # bin.install_symlink "/usr/local/bin/codezero/czctl"
+    bin.install "./*"
   end
 
   test do
-    system "/usr/local/bin/czctl", "start"
-    system "/usr/local/bin/czctl", "stop"
+    system "czctl", "start"
+    system "czctl", "stop"
   end
 end
