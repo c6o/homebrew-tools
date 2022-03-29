@@ -1,10 +1,13 @@
+require 'open-uri'
+
 class Czctl < Formula
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
   os = OS.mac? ? "darwin" : "linux"
+  releases = JSON.load(open("https://releases.codezero.io/release.json"))
 
   desc "Develop, debug, deploy using CodeZero"
   homepage "https://codezero.io/"
-  version "1.4.0"
+  version releases["stable"]["version"]
   
   url "https://releases.codezero.io/#{version}/headless-#{os}-#{arch}.tgz"
 
